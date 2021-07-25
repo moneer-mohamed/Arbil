@@ -1,0 +1,176 @@
+/*--------------------------------------------------------------
+# Start nav-menu
+--------------------------------------------------------------*/
+
+.nav_bar {
+    transition: .3s;
+    height: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    .content {
+        padding: 8px 0;
+        transition: .3s;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 65px;
+            transition: .3s;
+        }
+    }
+    .list {
+        &.left {
+            display: flex;
+            justify-content: flex-end;
+            li {
+                padding-inline-end: 0px;
+                padding-inline-start: 30px;
+            }
+        }
+        li {
+            display: inline-block;
+            padding-inline-end: 30px;
+            a {
+                position: relative;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 600;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    bottom: -13px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate( 45deg) scale(0);
+                    width: 7px;
+                    height: 7px;
+                    background-color: $mainColor;
+                    transition: .3s;
+                }
+                &:hover {
+                    color: $mainColor !important;
+                    &:after {
+                        transform: translateX(-50%) rotate( 45deg) scale(1);
+                    }
+                }
+            }
+        }
+    }
+    .icon_bar {
+        display: flex;
+        justify-content: flex-end;
+        span {
+            width: 55px;
+            height: 55px;
+            background: #fff;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0px 12px 8px 0px rgb(213 151 96 / 6%);
+            color: #1e1d23;
+            position: relative;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &.sticky {
+        left: 0;
+        margin: auto;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-bottom: 0;
+        z-index: 44;
+        -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+        animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+        .content {
+            background: #fff;
+            box-shadow: 0 0 60px 0 rgb(0 0 0 / 7%);
+        }
+        .list li a {
+            color: #212121;
+        }
+        .icon_bar span {
+            background: $mainColor;
+            color: #fff;
+        }
+    }
+}
+
+.sidebar {
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 250px;
+    background: #fff;
+    z-index: 9999999999;
+    transform: translateX(-100%);
+    transition: all .3s;
+    background-position: 36%;
+    opacity: 1;
+    &.opened {
+        transform: translateX(0%);
+        transition: all .3s;
+    }
+    .side-nav {
+        max-height: 100%;
+        height: calc(100% - 90px);
+        position: relative;
+        z-index: 1;
+        margin-top: 20px;
+        ul li {
+            display: block;
+            position: relative;
+            a {
+                display: block;
+                font-size: 16px;
+                padding: 11px 25px;
+                position: relative;
+                color: $secColor;
+                font-weight: 900;
+                text-transform: uppercase;
+                &:hover {
+                    background: $mainColor;
+                    color: #fff;
+                    border: none !important;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:991.98px) {
+    .nav_bar .list {
+        display: none !important;
+    }
+    .nav_bar .logo {
+        display: block;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End nav-menu
+--------------------------------------------------------------*/

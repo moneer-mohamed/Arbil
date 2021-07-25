@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+# Start Global Page
+--------------------------------------------------------------*/
+
+body {
+    direction: ltr;
+}
+
+.nav .sidebar {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.main-heading h4:after {
+    left: 0px;
+    right: auto;
+}
+
+.contact_page .modal_contact .info_card {
+    left: -70%;
+    right: auto;
+}
+
+.sidebar {
+    left: 0;
+    right: auto;
+    transform: translateX(-100%);
+}
+
+.services_section .box .icon:after {
+    left: -6px;
+    right: auto;
+}
+
+.about_background .item .info h4:after {
+    right: -50px;
+    left: auto;
+    background: linear-gradient( 270deg, #146e99 0%, #54b5e2 100%);
+}
+
+.Companies_section .owl-carousel .main-item {
+    direction: ltr;
+}
+
+.page-tittle {
+    background-image: linear-gradient( 220deg, rgba(40, 61, 75, 0.7) 59%, rgba(255, 255, 255, 0.86) 100%), url(../img/page_header_1.jpg) !important;
+}
+
+.page-tittle.page-tittle-contact {
+    background-image: linear-gradient( 218deg, rgba(40, 61, 75, 0.7) 59%, rgba(255, 255, 255, 0.86) 100%), url(../img/page_header.jpg) !important;
+}
+
+.et_pb_bottom_inside_divider {
+    transform: rotateY( 180deg) rotateX( 180deg) scaleX(-1);
+}
+
+.contact_page:after {
+    right: 0;
+    left: auto;
+    transform: translateY(-50%) scaleX(-1);
+}
+
+
+/*--------------------------------------------------------------
+# End Global Page
+--------------------------------------------------------------*/

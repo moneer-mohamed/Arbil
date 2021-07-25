@@ -1,0 +1,53 @@
+/*********** Start buttons ************/
+
+.main-btn {
+    padding: 14px 22px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    background-color: #fff;
+    line-height: 1.6;
+    z-index: 1;
+    overflow: hidden;
+    text-transform: capitalize;
+    i {
+        font-size: 16px;
+        margin-inline-end: 8px;
+        transition: transform 0.3s;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        left: inherit;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        height: 100%;
+        width: 0;
+        border-radius: 30px;
+        background: $mainColor;
+        -webkit-transition: all 240ms ease-in-out;
+        transition: all 240ms ease-in-out;
+    }
+    &:hover {
+        color: #fff;
+        i {
+            -webkit-transform: translateX(5px);
+            -ms-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        &:before {
+            width: 100%;
+            left: 0;
+            right: inherit;
+        }
+    }
+}
+
+
+/*********** End buttons ************/
