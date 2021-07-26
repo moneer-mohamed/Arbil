@@ -47,6 +47,13 @@
             right: inherit;
         }
     }
+    &.solid {
+        background-color: $mainColor;
+        color: #fff;
+        &:hover {
+            background-color: $secColor;
+        }
+    }
 }
 
 

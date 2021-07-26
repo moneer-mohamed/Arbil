@@ -2,6 +2,35 @@
 # Start Main Heading
 --------------------------------------------------------------*/
 
+.main-heading {
+    text-align: center;
+    span.text {
+        text-align: center;
+        color: $mainColor;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .1px;
+    }
+    h2 {
+        color: #333;
+        font-family: pottaOne, Sans-serif;
+        font-size: 36px;
+        text-transform: uppercase;
+        letter-spacing: .3px;
+        margin-top: 10px;
+    }
+    svg {
+        width: 40px;
+        height: auto;
+        transform: rotate( 270deg);
+        fill: $mainColor;
+        &:last-of-type {
+            transform: rotateY( 180deg) rotate( -90deg);
+        }
+    }
+}
+
 
 /*--------------------------------------------------------------
 # End Main Heading

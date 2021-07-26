@@ -33,6 +33,45 @@ $(document).ready(function() {
     });
 
 
+    $('.testimonial_active').owlCarousel({
+        loop: true,
+        margin: 30,
+        items: 1,
+        center: true,
+        autoplay: true,
+        smartSpeed: 1000,
+        stagePadding: 150,
+        responsiveClass: true,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+                stagePadding: 0,
+            },
+            575: {
+                items: 1,
+                stagePadding: 100,
+            },
+            768: {
+                items: 1,
+                stagePadding: 10,
+            },
+            992: {
+                items: 1,
+                stagePadding: 50,
+            },
+            1250: {
+                items: 1,
+                stagePadding: 150,
+            },
+        },
+    });
+
+
+
+
+
     /* ===============================  WOW.js  =============================== */
 
     new WOW().init();
@@ -62,6 +101,29 @@ $(document).ready(function() {
     /* ===============================  dropdown  =============================== */
 
     $('.dropdown-toggle').dropdown()
+
+    /* ===============================  tooltip  =============================== */
+    $('.tooltipp').tooltip();
+
+    /* ===============================  venobox  =============================== */
+    $('.venobox').venobox({
+        bgcolor: '',
+        overlayColor: 'rgba(6, 12, 34, 0.85)',
+        closeBackground: '',
+        closeColor: '#fff'
+    });
+
+
+    /* =============================== Settings of content tabs =============================== */
+    $('.products_section .list_menu ul li').on('click', function() {
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var id = $(this).attr('data-content')
+
+        $('.products_content .box_content[id="' + id + '"]').addClass('active').siblings().removeClass('active')
+
+    })
 
 });
 

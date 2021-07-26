@@ -2,7 +2,137 @@
 # Start footer
 --------------------------------------------------------------*/
 
+footer {
+    padding: 80px 0;
+    background-color: #1E1D23;
+    background-attachment: fixed;
+    background-image: url(../img/h1_shape.png);
+    position: relative;
+    z-index: 9;
+    .head {
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 22px;
+    }
+    .box {
+        margin-top: 30px;
+    }
+    .contacts {
+        .item {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            margin-bottom: 8px;
+            font-size: 15px;
+            .icon {
+                width: 20px;
+                display: flex;
+                align-items: center;
+                margin-inline-end: 10px;
+                i {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+    .work_hours {
+        display: flex;
+        justify-content: flex-end;
+        text-align: end;
+        .item {
+            color: #fff;
+            margin-bottom: 8px;
+            font-size: 15px;
+            .day {
+                color: $mainColor;
+            }
+        }
+    }
+    .info_site {
+        text-align: center;
+        margin-top: -15px;
+        .logo {
+            display: block;
+            margin-bottom: 15px;
+            img {
+                width: 70px;
+            }
+        }
+        .desc {
+            font-family: SortsMillGoudy, sans-serif;
+            color: #fff;
+            font-style: italic;
+        }
+        .sochial_media {
+            a {
+                width: 30px;
+                height: 30px;
+                border: 1px solid #3E4245;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 11px;
+                &:hover {
+                    background-color: $mainColor;
+                    border-color: $mainColor;
+                }
+            }
+        }
+    }
+}
+
 
 /*--------------------------------------------------------------
 # End footer
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Start Copy right
+--------------------------------------------------------------*/
+
+.copyright {
+    background-color: #0E1317;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 13px;
+    p {
+        color: #A1A3A4;
+        margin: 0;
+        a {
+            color: #fff;
+            text-decoration: underline;
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End Copy right
+--------------------------------------------------------------*/
+
+@media(max-width:767.98px) {
+    footer .info_site {
+        text-align: start;
+        margin-top: 30px;
+    }
+    footer .work_hours {
+        display: block;
+        text-align: start;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:575.98px) {
+    footer .box {
+        margin-top: 20px;
+    }
+    footer .head {
+        font-size: 20px;
+    }
+}
