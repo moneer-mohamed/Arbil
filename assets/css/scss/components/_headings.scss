@@ -31,6 +31,20 @@
     }
 }
 
+@media(max-width:575.98px) {
+    .main-heading {
+        h2 {
+            font-size: 23px;
+        }
+        svg {
+            width: 30px;
+            height: auto;
+            transform: rotate( 270deg);
+            fill: #aa9150;
+        }
+    }
+}
+
 
 /*--------------------------------------------------------------
 # End Main Heading

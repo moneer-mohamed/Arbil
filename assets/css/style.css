@@ -1511,6 +1511,14 @@ body {
     -o-transform: translateY(0);
     padding-top: 45px;
   }
+
+  .products_section .list_menu ul {
+    display: block;
+    text-align: center;
+  }
+  .products_section .list_menu ul li:not(:last-of-type) {
+    margin-inline-end: 0;
+  }
 }
 @media (max-width: 575.98px) {
   .con .img_slide {
@@ -2066,6 +2074,17 @@ footer .info_site .sochial_media a:hover {
   transform: rotateY(180deg) rotate(-90deg);
 }
 
+@media (max-width: 575.98px) {
+  .main-heading h2 {
+    font-size: 23px;
+  }
+  .main-heading svg {
+    width: 30px;
+    height: auto;
+    transform: rotate(270deg);
+    fill: #aa9150;
+  }
+}
 /*--------------------------------------------------------------
 # End Main Heading
 --------------------------------------------------------------*/
