@@ -26,8 +26,8 @@ $skewColor: rgba(0,
 .4);
 $slide1TopTextClr: #aa9150;
 $slideBotTextClr: #fff;
-body {
-    font-family: 'Roboto', sans-serif;
+.header {
+    direction: ltr;
 }
 
 .con {
@@ -67,18 +67,18 @@ body {
             transition: transform $topSpeed $bot-TextSpeed;
             &-inner {
                 position: fixed;
-                top: -59px;
+                top: 120px;
                 right: -175px;
                 width: 100%;
                 height: 500px;
-                transform: rotate(20deg);
+                transform: rotate( -30deg);
                 overflow: hidden;
                 &-text {
                     position: absolute;
-                    right: 21px;
-                    top: 649px;
-                    transform: rotate(-45deg);
-                    transition: transform $bot-TextSpeed;
+                    right: 179px;
+                    top: 560px;
+                    transform: rotate( -45deg);
+                    transition: transform 1000ms;
                 }
             }
         }
@@ -146,9 +146,9 @@ body {
             transform: rotate(-25deg);
             transition: transform $topSpeed $bot-TextSpeed;
             &-inner {
-                top: -31px;
-                left: -249px;
-                transform: rotate(-20deg);
+                top: 50px;
+                left: -170px;
+                transform: rotate( 26deg);
                 overflow: overflow;
                 &-text {
                     right: 10px;
@@ -329,8 +329,9 @@ body {
     .active {
         //////////// Slides Left /////////////
         .active-slide-left-top {
-            transform: translate(640px, 0) rotate(25deg);
-            transition: transform $topSpeed cubic-bezier(0, 0, 0.21, 1.02);
+            transform: translate(640px, 0px) rotate( 30deg);
+            transition: transform 650ms cubic-bezier(0, 0, 0.21, 1.02);
+            z-index: 2;
         }
         .active-slide-left-bot {
             transform: translateX(800px) rotate(-45deg);
@@ -343,8 +344,9 @@ body {
         }
         ///////////// Slides Right /////////////
         .active-slide-right-top {
-            transform: translateX(-585px) rotate(-25deg);
-            transition: transform $topSpeed;
+            transform: translateX(-585px) rotate( -25deg);
+            transition: transform 650ms;
+            z-index: 2;
         }
         .active-slide-right-bot {
             transform: translateX(-800px) rotate(45deg);
@@ -358,8 +360,8 @@ body {
         }
         /////////// Slide 1 ////////////
         .active-slide1-top-text {
-            transform: translate(75px, -282px) rotate(-45deg);
-            transition: transform $bot-TextSpeed $textShowDelay;
+            transform: translate(0, -282px) rotate( 0deg);
+            transition: transform 1000ms 1350ms;
         }
         .active-slide1-bot-text {
             transform: translate(-117px, 31px) rotate(45deg);
@@ -367,8 +369,8 @@ body {
         }
         ////////////// Slide 2 /////////////
         .active-slide2-top-text {
-            transform: translate(-43px, -219px) rotate(45deg);
-            transition-delay: $textShowDelay;
+            transform: translate(-43px, -299px) rotate(0);
+            transition-delay: 1350ms;
         }
         .active-slide2-bot-text {
             transform: translate(127px, -116px) rotate(-45deg);
@@ -376,8 +378,8 @@ body {
         }
         ////////////// Slide 3 /////////////
         .active-slide3-top-text {
-            transform: translate(54px, -241px) rotate(-45deg);
-            transition: transform $bot-TextSpeed $textShowDelay;
+            transform: translate(54px, -370px) rotate( 0deg);
+            transition: transform 1000ms 1350ms;
         }
         .active-slide3-bot-text {
             transform: translate(-190px, 43px) rotate(45deg);
@@ -385,8 +387,8 @@ body {
         }
         ////////////// Slide 4 /////////////
         .active-slide4-top-text {
-            transform: translate(-55px, -231px) rotate(45deg);
-            transition: transform $bot-TextSpeed $textShowDelay;
+            transform: translate(-55px, -320px) rotate(0);
+            transition: transform 1000ms 1350ms;
         }
         .active-slide4-bot-text {
             transform: translate(127px, -116px) rotate(-45deg);
@@ -752,11 +754,11 @@ body {
         margin-top: 30px;
         li {
             margin-top: 15px;
-            margin-right: 50px;
+            margin-inline-end: 50px;
             list-style: none;
             display: inline-block;
             &:last-child {
-                margin-right: 0;
+                margin-inline-end: 0;
             }
         }
     }
@@ -919,10 +921,10 @@ body {
         .tm_counter {
             margin-top: 45px;
             li {
-                margin-right: 65px;
+                margin-inline-end: 65px;
                 margin-top: 20px;
                 &:last-child {
-                    margin-right: 0;
+                    margin-inline-end: 0;
                 }
             }
             h3 {

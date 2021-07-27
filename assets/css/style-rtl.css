@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+# Start Global Page
+--------------------------------------------------------------*/
+
+body {
+    direction: rtl;
+}
+
+.sidebar {
+    left: 0;
+    right: auto;
+    transform: translateX(-100%);
+}
+
+.features_section .box .elementor-cta__bg-wrapper .elementor-cta__bg {
+    transform: translateX(50px);
+}
+
+.main-btn:hover i {
+    -webkit-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    transform: translateX(-5px);
+}
+
+.main-heading svg {
+    transform: rotate( 90deg) rotateY( 180deg);
+}
+
+.main-heading svg:last-of-type {
+    transform: rotate( -90deg);
+}
+
+.testimonial_area {
+    background-position: right center;
+}
+
+.testimonial_active {
+    right: auto;
+    left: 0;
+}
+
+.offer_area::before {
+    left: auto;
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.testimonial_active .owl-stage {
+    padding-right: 0px !important;
+}
+
+
+/*--------------------------------------------------------------
+# End Global Page
+--------------------------------------------------------------*/

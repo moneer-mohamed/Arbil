@@ -4,20 +4,8 @@
 # Start Global Page
 --------------------------------------------------------------*/
 @font-face {
-  font-family: Bahij_Bold;
-  src: url(../fonts/Bahij_Bold.ttf);
-}
-@font-face {
   font-family: Bahij_Light;
   src: url(../fonts/Bahij_Light.ttf);
-}
-@font-face {
-  font-family: Bahij_SemiBold;
-  src: url(../fonts/Bahij_SemiBold.ttf);
-}
-@font-face {
-  font-family: Tajawal;
-  src: url(../fonts/Tajawal-Regular.ttf);
 }
 @font-face {
   font-family: PottaOne;
@@ -42,7 +30,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  font-family: Bahij_Light, sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
   background-color: #fff;
   color: #474747;
@@ -382,8 +370,8 @@ input::placeholder {
 /*--------------------------------------------------------------
   # Start slider
 --------------------------------------------------------------*/
-body {
-  font-family: "Roboto", sans-serif;
+.header {
+  direction: ltr;
 }
 
 .con {
@@ -422,17 +410,17 @@ body {
 }
 .con__slide-top-inner {
   position: fixed;
-  top: -59px;
+  top: 120px;
   right: -175px;
   width: 100%;
   height: 500px;
-  transform: rotate(20deg);
+  transform: rotate(-30deg);
   overflow: hidden;
 }
 .con__slide-top-inner-text {
   position: absolute;
-  right: 21px;
-  top: 649px;
+  right: 179px;
+  top: 560px;
   transform: rotate(-45deg);
   transition: transform 1000ms;
 }
@@ -499,9 +487,9 @@ body {
   transition: transform 650ms 1000ms;
 }
 .con__slide--right-top-inner {
-  top: -31px;
-  left: -249px;
-  transform: rotate(-20deg);
+  top: 50px;
+  left: -170px;
+  transform: rotate(26deg);
   overflow: overflow;
 }
 .con__slide--right-top-inner-text {
@@ -662,8 +650,9 @@ body {
   transform: rotate(-225deg) scale(1.2, 1.2);
 }
 .con .active .active-slide-left-top {
-  transform: translate(640px, 0) rotate(25deg);
+  transform: translate(640px, 0px) rotate(30deg);
   transition: transform 650ms cubic-bezier(0, 0, 0.21, 1.02);
+  z-index: 2;
 }
 .con .active .active-slide-left-bot {
   transform: translateX(800px) rotate(-45deg);
@@ -677,6 +666,7 @@ body {
 .con .active .active-slide-right-top {
   transform: translateX(-585px) rotate(-25deg);
   transition: transform 650ms;
+  z-index: 2;
 }
 .con .active .active-slide-right-bot {
   transform: translateX(-800px) rotate(45deg);
@@ -689,7 +679,7 @@ body {
   transition: transform 1400ms 1350ms, opacity 1400ms 1350ms, z-index 0s 1s;
 }
 .con .active .active-slide1-top-text {
-  transform: translate(75px, -282px) rotate(-45deg);
+  transform: translate(0, -282px) rotate(0deg);
   transition: transform 1000ms 1350ms;
 }
 .con .active .active-slide1-bot-text {
@@ -697,7 +687,7 @@ body {
   transition: transform 1000ms 1350ms;
 }
 .con .active .active-slide2-top-text {
-  transform: translate(-43px, -219px) rotate(45deg);
+  transform: translate(-43px, -299px) rotate(0);
   transition-delay: 1350ms;
 }
 .con .active .active-slide2-bot-text {
@@ -705,7 +695,7 @@ body {
   transition-delay: 1350ms;
 }
 .con .active .active-slide3-top-text {
-  transform: translate(54px, -241px) rotate(-45deg);
+  transform: translate(54px, -370px) rotate(0deg);
   transition: transform 1000ms 1350ms;
 }
 .con .active .active-slide3-bot-text {
@@ -713,7 +703,7 @@ body {
   transition: transform 1000ms 1350ms;
 }
 .con .active .active-slide4-top-text {
-  transform: translate(-55px, -231px) rotate(45deg);
+  transform: translate(-55px, -320px) rotate(0);
   transition: transform 1000ms 1350ms;
 }
 .con .active .active-slide4-bot-text {
@@ -1040,12 +1030,12 @@ body {
 }
 .offer_area .offer_btn li {
   margin-top: 15px;
-  margin-right: 50px;
+  margin-inline-end: 50px;
   list-style: none;
   display: inline-block;
 }
 .offer_area .offer_btn li:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 .offer_area .offer_price h4 {
   color: #aa9150;
@@ -1198,11 +1188,11 @@ body {
   margin-top: 45px;
 }
 .testimonial_area .tm_content .tm_counter li {
-  margin-right: 65px;
+  margin-inline-end: 65px;
   margin-top: 20px;
 }
 .testimonial_area .tm_content .tm_counter li:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 .testimonial_area .tm_content .tm_counter h3 {
   font-size: 40px;

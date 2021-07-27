@@ -3,23 +3,8 @@
 --------------------------------------------------------------*/
 
 @font-face {
-    font-family: Bahij_Bold;
-    src: url(../fonts/Bahij_Bold.ttf);
-}
-
-@font-face {
     font-family: Bahij_Light;
     src: url(../fonts/Bahij_Light.ttf);
-}
-
-@font-face {
-    font-family: Bahij_SemiBold;
-    src: url(../fonts/Bahij_SemiBold.ttf);
-}
-
-@font-face {
-    font-family: Tajawal;
-    src: url(../fonts/Tajawal-Regular.ttf);
 }
 
 @font-face {
@@ -47,7 +32,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-    font-family: Bahij_Light, sans-serif;
+    font-family: 'Roboto', sans-serif;
     position: relative;
     background-color: $bg_ColorBody;
     color: $pColor;
