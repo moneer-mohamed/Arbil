@@ -59,7 +59,7 @@ $slideBotTextClr: #fff;
             background: $skewColor;
         }
         &-top {
-            top: -200px;
+            top: -225px;
             left: -835px;
             height: 1235px;
             width: 550px;
@@ -78,7 +78,8 @@ $slideBotTextClr: #fff;
                     right: 179px;
                     top: 560px;
                     transform: rotate( -45deg);
-                    transition: transform 1000ms;
+                    transition: transform 1000ms, opacity $bot-TextSpeed $textShowDelay;
+                    opacity: 0;
                 }
             }
         }
@@ -155,7 +156,8 @@ $slideBotTextClr: #fff;
                     top: 620px;
                     transform: rotate(45deg);
                     animation: initial;
-                    transition: transform $bot-TextSpeed 0s;
+                    transition: transform $bot-TextSpeed 0s, opacity $contSpeed $textShowDelay;
+                    opacity: 0;
                 }
             }
             &-h {
@@ -361,7 +363,8 @@ $slideBotTextClr: #fff;
         /////////// Slide 1 ////////////
         .active-slide1-top-text {
             transform: translate(0, -282px) rotate( 0deg);
-            transition: transform 1000ms 1350ms;
+            transition: transform 1000ms 1350ms, opacity $contSpeed $textShowDelay, ;
+            opacity: 1;
         }
         .active-slide1-bot-text {
             transform: translate(-117px, 31px) rotate(45deg);
@@ -371,6 +374,7 @@ $slideBotTextClr: #fff;
         .active-slide2-top-text {
             transform: translate(-43px, -299px) rotate(0);
             transition-delay: 1350ms;
+            opacity: 1;
         }
         .active-slide2-bot-text {
             transform: translate(127px, -116px) rotate(-45deg);
@@ -379,7 +383,8 @@ $slideBotTextClr: #fff;
         ////////////// Slide 3 /////////////
         .active-slide3-top-text {
             transform: translate(54px, -370px) rotate( 0deg);
-            transition: transform 1000ms 1350ms;
+            transition: transform 1000ms 1350ms, opacity $bot-TextSpeed $textShowDelay;
+            opacity: 1;
         }
         .active-slide3-bot-text {
             transform: translate(-190px, 43px) rotate(45deg);
@@ -388,7 +393,8 @@ $slideBotTextClr: #fff;
         ////////////// Slide 4 /////////////
         .active-slide4-top-text {
             transform: translate(-55px, -320px) rotate(0);
-            transition: transform 1000ms 1350ms;
+            transition: transform 1000ms 1350ms, opacity $bot-TextSpeed $textShowDelay;
+            opacity: 1;
         }
         .active-slide4-bot-text {
             transform: translate(127px, -116px) rotate(-45deg);

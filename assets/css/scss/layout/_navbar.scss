@@ -7,7 +7,7 @@
     height: 0;
     position: fixed;
     width: 100%;
-    z-index: 9;
+    z-index: 999;
     .content {
         padding: 8px 0;
         transition: .3s;
@@ -17,7 +17,7 @@
         display: flex;
         justify-content: center;
         img {
-            width: 65px;
+            width: 75px;
             transition: .3s;
         }
     }

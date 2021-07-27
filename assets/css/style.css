@@ -202,7 +202,7 @@ input::placeholder {
   height: 0;
   position: fixed;
   width: 100%;
-  z-index: 9;
+  z-index: 999;
 }
 .nav_bar .content {
   padding: 8px 0;
@@ -214,7 +214,7 @@ input::placeholder {
   justify-content: center;
 }
 .nav_bar .logo img {
-  width: 65px;
+  width: 75px;
   transition: 0.3s;
 }
 .nav_bar .list.left {
@@ -401,7 +401,7 @@ input::placeholder {
   background: rgba(0, 0, 0, 0.4);
 }
 .con__slide-top {
-  top: -200px;
+  top: -225px;
   left: -835px;
   height: 1235px;
   width: 550px;
@@ -422,7 +422,8 @@ input::placeholder {
   right: 179px;
   top: 560px;
   transform: rotate(-45deg);
-  transition: transform 1000ms;
+  transition: transform 1000ms, opacity 1000ms 1350ms;
+  opacity: 0;
 }
 .con__slide-bot {
   top: -50px;
@@ -497,7 +498,8 @@ input::placeholder {
   top: 620px;
   transform: rotate(45deg);
   animation: initial;
-  transition: transform 1000ms 0s;
+  transition: transform 1000ms 0s, opacity 1400ms 1350ms;
+  opacity: 0;
 }
 .con__slide--right-top-h {
   width: 450px;
@@ -680,7 +682,8 @@ input::placeholder {
 }
 .con .active .active-slide1-top-text {
   transform: translate(0, -282px) rotate(0deg);
-  transition: transform 1000ms 1350ms;
+  transition: transform 1000ms 1350ms, opacity 1400ms 1350ms;
+  opacity: 1;
 }
 .con .active .active-slide1-bot-text {
   transform: translate(-117px, 31px) rotate(45deg);
@@ -689,6 +692,7 @@ input::placeholder {
 .con .active .active-slide2-top-text {
   transform: translate(-43px, -299px) rotate(0);
   transition-delay: 1350ms;
+  opacity: 1;
 }
 .con .active .active-slide2-bot-text {
   transform: translate(127px, -116px) rotate(-45deg);
@@ -696,7 +700,8 @@ input::placeholder {
 }
 .con .active .active-slide3-top-text {
   transform: translate(54px, -370px) rotate(0deg);
-  transition: transform 1000ms 1350ms;
+  transition: transform 1000ms 1350ms, opacity 1000ms 1350ms;
+  opacity: 1;
 }
 .con .active .active-slide3-bot-text {
   transform: translate(-190px, 43px) rotate(45deg);
@@ -704,7 +709,8 @@ input::placeholder {
 }
 .con .active .active-slide4-top-text {
   transform: translate(-55px, -320px) rotate(0);
-  transition: transform 1000ms 1350ms;
+  transition: transform 1000ms 1350ms, opacity 1000ms 1350ms;
+  opacity: 1;
 }
 .con .active .active-slide4-bot-text {
   transform: translate(127px, -116px) rotate(-45deg);
@@ -1590,7 +1596,7 @@ footer .info_site .logo {
   margin-bottom: 15px;
 }
 footer .info_site .logo img {
-  width: 70px;
+  width: 115px;
 }
 footer .info_site .desc {
   font-family: SortsMillGoudy, sans-serif;
