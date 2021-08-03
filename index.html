@@ -2240,6 +2240,7 @@
     <script src="assets/vendor/venobox/venobox.min.js"></script>
     <script src="assets/vendor/mixitup/mixitup.min.js"></script>
     <script src="assets/vendor/multi-counter.js"></script>
+    <script src="assets/vendor/jarallax.min.js"></script>
     <script src="assets/vendor/TweenMax.js"></script>
 
 
@@ -2365,6 +2366,17 @@
                     botLink.css('text-decoration', 'none');
                 }
             });
+        });
+    </script>
+
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var top = document.documentElement.scrollTop,
+                nav_bar = document.getElementById('nav_bar')
+
+            top > 137 ? nav_bar.classList.add('sticky') : nav_bar.classList.remove('sticky');
+
         });
     </script>
 

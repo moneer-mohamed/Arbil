@@ -792,31 +792,6 @@ $slideBotTextClr: #fff;
     }
 }
 
-.sec_title {
-    margin-bottom: 20px;
-    >span {
-        font-size: 22px;
-        color: $mainColor;
-        margin-bottom: 16px;
-        font-family: 'Sofia', cursive;
-        display: block;
-    }
-    >h2 {
-        color: #1e1d23;
-        font-size: 45px;
-        line-height: 1.2;
-        text-transform: uppercase;
-        margin-bottom: 22px;
-    }
-    p {
-        font-size: 17px;
-        font-weight: normal;
-        line-height: 28px;
-        color: #8d8d8d;
-        margin-bottom: 15px;
-    }
-}
-
 .ul_li {
     justify-content: flex-start;
     margin: 0px;

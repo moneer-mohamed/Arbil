@@ -90,6 +90,13 @@ $(document).ready(function() {
 
 
 
+    /* ===============================  jarallax  =============================== */
+
+    $('.jarallax').jarallax({
+
+        // options here
+
+    });
 
 
     /* ===============================  WOW.js  =============================== */
@@ -144,15 +151,5 @@ $(document).ready(function() {
         $('.products_content .box_content[id="' + id + '"]').addClass('active').siblings().removeClass('active')
 
     })
-
-});
-
-
-
-window.addEventListener('scroll', function() {
-    var top = document.documentElement.scrollTop,
-        nav_bar = document.getElementById('nav_bar')
-
-    top > 137 ? nav_bar.classList.add('sticky') : nav_bar.classList.remove('sticky');
 
 });

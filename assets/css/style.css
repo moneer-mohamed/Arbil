@@ -170,6 +170,11 @@ input::placeholder {
   top: 20px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .custom-text {
   border: 0;
   background-color: #FFFFFF;
@@ -185,6 +190,63 @@ input::placeholder {
   color: rgba(122, 127, 128, 0.31);
 }
 
+.sec_title {
+  margin-bottom: 20px;
+}
+.sec_title > span {
+  font-size: 22px;
+  color: #aa9150;
+  margin-bottom: 16px;
+  font-family: "Sofia", cursive;
+  display: block;
+}
+.sec_title > h2 {
+  color: #1e1d23;
+  font-size: 45px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+.sec_title p {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 28px;
+  color: #8d8d8d;
+  margin-bottom: 15px;
+}
+
+.ul_li {
+  justify-content: flex-start;
+}
+
+.ul_li,
+.ul_li_right,
+.ul_li_center {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ul_li > li,
+.ul_li_right > li,
+.ul_li_center > li {
+  list-style: none;
+  display: inline-block;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sec_title > h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .sec_title > h2 {
+    font-size: 30px;
+  }
+}
 /*--------------------------------------------------------------
 # End Global Page
 --------------------------------------------------------------*/
@@ -365,8 +427,56 @@ input::placeholder {
 /*--------------------------------------------------------------
 # End nav-menu
 --------------------------------------------------------------*/
-/*Start page header*/
-/*End page header*/
+/*--------------------------------------------------------------
+# Start Page header
+--------------------------------------------------------------*/
+.page_header {
+  position: relative;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  margin-top: 93px;
+}
+.page_header:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(45, 45, 43, 0.69) 0%, rgba(57, 59, 60, 0.69) 100%);
+}
+.page_header .info {
+  position: relative;
+  z-index: 1;
+}
+.page_header .info span {
+  color: #fff;
+  font-size: 32px;
+  display: inline-block;
+  position: relative;
+  padding-inline-start: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.page_header .info span::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  background-color: #aa9150;
+  border-radius: 50%;
+}
+
+/*--------------------------------------------------------------
+# End Page header
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
   # Start slider
 --------------------------------------------------------------*/
@@ -1066,31 +1176,6 @@ input::placeholder {
   max-width: 110px;
 }
 
-.sec_title {
-  margin-bottom: 20px;
-}
-.sec_title > span {
-  font-size: 22px;
-  color: #aa9150;
-  margin-bottom: 16px;
-  font-family: "Sofia", cursive;
-  display: block;
-}
-.sec_title > h2 {
-  color: #1e1d23;
-  font-size: 45px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  margin-bottom: 22px;
-}
-.sec_title p {
-  font-size: 17px;
-  font-weight: normal;
-  line-height: 28px;
-  color: #8d8d8d;
-  margin-bottom: 15px;
-}
-
 .ul_li {
   justify-content: flex-start;
   margin: 0px;
@@ -1537,6 +1622,163 @@ input::placeholder {
 
   .wavesshape.top {
     top: -10px;
+  }
+}
+/*--------------------------------------------------------------
+  # Start About page
+--------------------------------------------------------------*/
+.about_info_section {
+  padding: 100px 0;
+}
+.about_info_section .services_img {
+  margin-inline-end: 70px;
+  max-width: 560px;
+}
+.about_info_section .services_img img {
+  max-width: 100%;
+  height: auto;
+}
+.about_info_section .services_content .a_info_list {
+  margin-top: 40px;
+}
+.about_info_section .services_content .a_info_list.ul_li li {
+  width: 50%;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  color: #1b2026;
+  font-size: 18px;
+  font-weight: 500;
+}
+.about_info_section .services_content .a_info_list.ul_li li i {
+  width: 40px;
+  height: 40px;
+  background: #Fff;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 12px;
+  border-radius: 7px;
+  box-shadow: 0px 12px 8px 0px rgba(213, 151, 96, 0.06);
+}
+
+.cta_area {
+  position: relative;
+  overflow: visible;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+.cta_area .cta_bg_2 {
+  position: relative;
+  z-index: 1;
+  padding: 70px 0;
+  padding-inline-start: 80px;
+}
+.cta_area .cta_bg_2::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 76%;
+  height: 100%;
+  background: #f2f2f2;
+  content: "";
+  z-index: -1;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.cta_area .cta_img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.team_area {
+  padding: 90px 0;
+}
+.team_area .team_single {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  padding-bottom: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.team_area .team_single .team_thumb {
+  max-width: 315px;
+  margin: auto;
+  border-radius: 50%;
+}
+.team_area .team_single .team_text {
+  margin-top: 32px;
+  margin-bottom: 30px;
+}
+.team_area .team_single .team_text h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.team_area .team_single .team_text span {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #aa9150;
+  font-weight: 500;
+}
+.team_area .team_single .team_social a {
+  font-size: 14px;
+  height: 40px;
+  width: 40px;
+  color: #706c61;
+  background: #f7f6f3;
+  display: inline-block;
+  margin: 0 4px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+}
+.team_area .team_single .team_social a:hover {
+  background-color: #aa9150;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+  # End About page
+--------------------------------------------------------------*/
+@media (max-width: 991.98px) {
+  .about_info_section .services_img {
+    margin-inline-end: 0;
+    margin-bottom: 50px;
+  }
+
+  .cta_area {
+    margin-top: 0;
+  }
+  .cta_area .cta_img {
+    display: none;
+  }
+
+  .cta_area .cta_bg_2::before {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .cta_area .cta_bg_2 {
+    padding: 60px 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .about_info_section .services_content .a_info_list {
+    display: block;
+  }
+  .about_info_section .services_content .a_info_list li {
+    width: 100% !important;
   }
 }
 /*--------------------------------------------------------------

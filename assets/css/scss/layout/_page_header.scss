@@ -1,4 +1,52 @@
-/*Start page header*/
+/*--------------------------------------------------------------
+# Start Page header
+--------------------------------------------------------------*/
+
+.page_header {
+    position: relative;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    margin-top: 93px;
+    &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient( 90deg, rgb(45 45 43 / 69%) 0%, rgb(57 59 60 / 69%) 100%);
+    }
+    .info {
+        position: relative;
+        z-index: 1;
+        span {
+            color: #fff;
+            font-size: 32px;
+            display: inline-block;
+            position: relative;
+            padding-inline-start: 20px;
+            text-transform: capitalize;
+            font-weight: 500;
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 13px;
+                height: 13px;
+                background-color: $mainColor;
+                border-radius: 50%;
+            }
+        }
+    }
+}
 
 
-/*End page header*/
+/*--------------------------------------------------------------
+# End Page header
+--------------------------------------------------------------*/

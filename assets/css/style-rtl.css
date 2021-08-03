@@ -9,9 +9,9 @@ body {
 }
 
 .sidebar {
-    left: 0;
-    right: auto;
-    transform: translateX(-100%);
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
 }
 
 .features_section .box .elementor-cta__bg-wrapper .elementor-cta__bg {
@@ -49,6 +49,16 @@ body {
 
 .testimonial_active .owl-stage {
     padding-right: 0px !important;
+}
+
+.page_header .info span::before {
+    right: 0;
+    left: auto;
+}
+
+.cta_area .cta_img {
+    bottom: 0;
+    transform: scaleX(-1);
 }
 
 
