@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 
     /* ===============================  tabs Carousel =============================== */
-    $(".tabs-section .owl-carousel").owlCarousel({
+    $(".tabs-section .owl-carousel, .menu_wrap.owl-carousel").owlCarousel({
         autoplay: false,
         nav: true,
         dots: false,
@@ -151,5 +151,29 @@ $(document).ready(function() {
         $('.products_content .box_content[id="' + id + '"]').addClass('active').siblings().removeClass('active')
 
     })
+
+    /* =============================== Settings of content tabs =============================== */
+    $('.menu_page .menu_wrap .item').on('click', function() {
+
+        $(this).addClass('active').parent().siblings().find('.item').removeClass('active');
+
+        var id = $(this).attr('data-content')
+
+        $('.menu_page .menu_content .box_content[id="' + id + '"]').addClass('active').siblings().removeClass('active')
+
+    })
+
+
+    /* =============================== nice select =============================== */
+    $('.nice-select').niceSelect();
+
+    /* =============================== jquery ui =============================== */
+    $('input.timepicker').timepicker({});
+
+    $('#date').datepicker({
+        'format': 'm/d/yyyy',
+        'autoclose': true
+    });
+
 
 });

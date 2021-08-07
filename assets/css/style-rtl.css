@@ -61,6 +61,35 @@ body {
     transform: scaleX(-1);
 }
 
+.blog_details_area .blog_dtls_wrap .post_content .post_meta li:not(:last-child)::before {
+    left: 0;
+    right: auto;
+}
+
+.order_table_page .reserve_table_form .form_item i {
+    right: auto;
+    left: 25px;
+}
+
+.order_table_page .reserve_table_form .nice-select:after {
+    left: 28px;
+    right: auto;
+}
+
+.menu_page .menu_content .recipe_item .ri_content .ri_cart .old:before {
+    left: auto;
+    right: 0;
+}
+
+.blogs_page .inner-box .lower-content .read-more-link:before {
+    left: auto;
+    right: 0;
+}
+
+.blogs_page .inner-box .lower-content .read-more-link:hover:before {
+    right: 5px;
+}
+
 
 /*--------------------------------------------------------------
 # End Global Page

@@ -35,6 +35,11 @@
     .main-heading {
         h2 {
             font-size: 23px;
+            display: flex;
+            justify-content: center;
+            span {
+                margin: 0 8px;
+            }
         }
         svg {
             width: 30px;
